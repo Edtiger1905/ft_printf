@@ -41,8 +41,7 @@ int print_pointer(void *ptr)
     {
         ft_putchar('0');
         ft_putchar('x');
-        ft_putchar('0');
-        char_count += 3; // Conta '0x0'
+        char_count += 2; // Conta '0x'
     }
     char_count += print_hex(address, 0);
     return char_count;

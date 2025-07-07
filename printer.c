@@ -31,7 +31,7 @@ int print_string(const char *str)
     return char_count;
 }
 
-// Funzione per stampare un puntatore
+/* Funzione per stampare un puntatore
 int print_pointer(void *ptr)
 {
     unsigned long address = (unsigned long)ptr;
@@ -41,11 +41,33 @@ int print_pointer(void *ptr)
     {
         ft_putchar('0');
         ft_putchar('x');
-        char_count += 2; // Conta '0x'
+        char_count += 2;
     }
     char_count += print_hex(address, 0);
     return char_count;
+}*/
+int print_pointer(void *ptr)
+{
+    unsigned long address = (unsigned long)ptr;
+    int char_count = 0;
+
+    ft_putchar('0');
+    ft_putchar('x');
+    char_count += 2;
+
+    if (ptr == NULL)
+    {
+        ft_putchar('0');
+        char_count += 1;
+    }
+    else
+    {
+        char_count += print_hex(address, 0);
+    }
+
+    return char_count;
 }
+
 
 // Funzione per stampare un numero senza segno
 int print_unsigned(unsigned int val)

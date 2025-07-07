@@ -51,21 +51,19 @@ int print_pointer(void *ptr)
     unsigned long address = (unsigned long)ptr;
     int char_count = 0;
 
-    ft_putchar('0');
-    ft_putchar('x');
-    char_count += 2;
 
     if (ptr == NULL)
     {
-        ft_putchar('0');
+        write(1,'(nil)',5);
         char_count += 1;
     }
-    else
-    {
-        char_count += print_hex(address, 0);
-    }
 
-    return char_count;
+    ft_putchar('0');
+    ft_putchar('x');
+    char_count += 2;
+    char_count += print_hex(address, 0);
+
+    return char_count;  
 }
 
 

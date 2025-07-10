@@ -1,4 +1,4 @@
-SRC = ft_printf.c
+SRC = ft_printf.c printer.c
 
 NAME = libftprintf.a
 
